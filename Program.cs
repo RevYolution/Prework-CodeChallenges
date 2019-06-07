@@ -76,7 +76,7 @@ namespace CodeChallengePrework
             //Console.WriteLine("Hello 3");
             List<int> sequence = new List<int>();
 
-            Console.WriteLine("Input a any sequence of whole numbers positive or negitive and type \"done\" when complete.");
+            Console.WriteLine("Input any sequence of whole numbers positive or negitive. Hit enter after each entry and type \"done\" when complete.");
             Console.WriteLine("If the sum and product of the sequence are equal the sequence is perfect.");
 
             bool inputSequence = true;
@@ -107,10 +107,10 @@ namespace CodeChallengePrework
                 }
                 else
                 {
-                    //int val;
-                    //int.TryParse(inputValues, out val);
-                    //sequence.Add(val);
-                    Console.WriteLine("Nope");
+                    int val;
+                    int.TryParse(inputValues, out val);
+                    sequence.Add(val);
+                    //Console.WriteLine("Nope");
                 }
             }
             //Console.Read();
