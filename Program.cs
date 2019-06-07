@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CodeChallengePrework
 {
@@ -9,7 +10,8 @@ namespace CodeChallengePrework
             //Console.WriteLine("Hello World!");
             //Console.Read();
             //ArrayMaxResult();
-            LeapYearCalculator();
+            //LeapYearCalculator();
+            PerfectSequence();
         }
 
         /*static void ArrayMaxResult ()
@@ -52,7 +54,7 @@ namespace CodeChallengePrework
 
         }*/
 
-        static void LeapYearCalculator()
+        /*static void LeapYearCalculator()
         {
             //Console.WriteLine("Hello Second!");
 
@@ -67,7 +69,53 @@ namespace CodeChallengePrework
                 Console.WriteLine($"{leapYear} is not a leap year");
             }
             //Console.Read();
+        }*/
+
+        static void PerfectSequence()
+        {
+            //Console.WriteLine("Hello 3");
+            List<int> sequence = new List<int>();
+
+            Console.WriteLine("Input a any sequence of whole numbers positive or negitive and type \"done\" when complete.");
+            Console.WriteLine("If the sum and product of the sequence are equal the sequence is perfect.");
+
+            bool inputSequence = true;
+
+            while (inputSequence)
+            {
+                string inputValues = Console.ReadLine();
+
+                if (inputValues == "done")
+                {
+                    int sequenceSum = 0;
+                    int sequenceProduct = 1;
+
+                    foreach (var value in sequence)
+                    {
+                        sequenceSum += value;
+                        sequenceProduct *= value;
+                    }
+                    if (sequenceSum == sequenceProduct)
+                    {
+                        Console.WriteLine("Perfect");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Imperfect");
+                    }
+                    inputSequence = false;
+                }
+                else
+                {
+                    //int val;
+                    //int.TryParse(inputValues, out val);
+                    //sequence.Add(val);
+                    Console.WriteLine("Nope");
+                }
+            }
+            //Console.Read();
         }
+
 
     }
 }
