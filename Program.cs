@@ -8,10 +8,11 @@ namespace CodeChallengePrework
         {
             //Console.WriteLine("Hello World!");
             //Console.Read();
-            ArrayMaxResult();
+            //ArrayMaxResult();
+            LeapYearCalculator();
         }
 
-        static void ArrayMaxResult ()
+        /*static void ArrayMaxResult ()
         {
             //Console.WriteLine("Hello First!");
             //Console.Read();
@@ -49,6 +50,24 @@ namespace CodeChallengePrework
             //Console.WriteLine("Choose a number between 1 and 10: ");
             //Console.Read();
 
+        }*/
+
+        static void LeapYearCalculator()
+        {
+            //Console.WriteLine("Hello Second!");
+
+            Console.WriteLine("Want to know if a year is a leap year? Input a year to find out: ");
+            int leapYear = int.Parse(Console.ReadLine());
+            if (leapYear % 4 == 0)
+            {
+                Console.WriteLine($"{leapYear} is a leap year");
+            }
+            else
+            {
+                Console.WriteLine($"{leapYear} is not a leap year");
+            }
+            //Console.Read();
         }
+
     }
 }
